@@ -1,9 +1,13 @@
 <template>
-  <div class="event-card">
-    <!-- display event data -->
-    <span>@{{ event.time }} on {{ event.date }}</span>
-    <h4>{{ event.title }}</h4>
-  </div>
+  <router-link 
+  class="event-link"
+  :to="{name:'EventDetails', params:{id: event.id}}">
+    <div class="event-card">
+      <!-- display event data -->
+      <span>@{{ event.time }} on {{ event.date }}</span>
+      <h4>{{ event.title }}</h4>
+    </div>
+  </router-link>
 </template>
 
 <script>
